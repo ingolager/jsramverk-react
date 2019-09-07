@@ -1,5 +1,41 @@
 .App {
+  /* float: right; */
+  flex: 1;
+}
+
+.App-nav {
+    width: 20%;
+    /* float: left; */
+}
+
+.Container {
+    display: flex;
+}
+
+.Me {
+    width: 40%;
+    margin-left: 10%;
+}
+
+img {
+    width: 100%;
+    border-radius: 5%;
+}
+
+header {
   text-align: center;
+  font-size: 20px;
+  background-color: #4E433A;
+}
+
+header h1 {
+    padding-bottom: 5px;
+    color: #B3AD90;
+}
+
+h2 {
+    font-size: 32px;
+    color: #D9D4BE;
 }
 
 .App-logo {
@@ -8,15 +44,78 @@
   pointer-events: none;
 }
 
+p {
+    color: #D9D4BE;
+}
+
+footer {
+    margin-top: 40px;
+    border-top: 1px solid #D9D4BE;
+}
+
+footer p {
+    text-align: center;
+    color: #D9D4BE;
+}
+
+nav {
+    text-align: left;
+    /* display: flex;
+    flex-direction: column; */
+    display: block;
+    width: 160px;
+    color: #1e90ff;
+    margin-left:20px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+li {
+    font-size: 32px;
+}
+
+li a {
+    text-decoration: none;
+    color: #E30117;
+}
+
+li a:hover {
+    color: #867466;
+}
+
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-main {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  justify-content: left;
+  color: white;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
+}
+
+.App-main > div {
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  background-color: DodgerBlue;
 }
 
 .App-link {

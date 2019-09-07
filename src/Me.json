@@ -1,5 +1,7 @@
 {
   "mehead": "Fyra nyanser av ramverk",
   "metext": "Jag heter Ingvar Lagerlöf och går andra året på BTH:s distanprogram Webbprogrammering. Jag arbetar också som webbredaktör på Botkyrka kommun och vet inte vad jag vill bli när jag blir stor. ",
-  "description": "Här är en bit text."
+  "description": "Här är en bit text.",
+  "reporthead": "Redovisning vecka 1",
+  "reporttext": "Modulerna i denna app är skapade med kommandot npx create-react-app my-app. Starta appen med kommandot npm start."
 }

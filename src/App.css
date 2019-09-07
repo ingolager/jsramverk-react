@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Manjari&display=swap');
+
 .App {
   /* float: right; */
   flex: 1;
@@ -10,6 +12,7 @@
 
 .Container {
     display: flex;
+    min-height: 22rem;
 }
 
 .Me {
@@ -18,7 +21,7 @@
 }
 
 img {
-    width: 100%;
+    width: 60%;
     border-radius: 5%;
 }
 
@@ -34,6 +37,7 @@ header h1 {
 }
 
 h2 {
+    font-family: "Manjari";
     font-size: 32px;
     color: #D9D4BE;
 }
@@ -48,9 +52,17 @@ p {
     color: #D9D4BE;
 }
 
+p a {
+    color: #D9D4BE;
+}
+
 footer {
     margin-top: 40px;
     border-top: 1px solid #D9D4BE;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
 
 footer p {

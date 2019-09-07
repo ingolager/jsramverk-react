@@ -1,7 +1,7 @@
 Modulerna i denna app är skapade med kommandot npx create-react-app my-app.
 Starta appen med kommandot npm start.
 
-Report för denna app finns på https://github.com/ingolager/jsramverk-react
+Repot för denna app finns på https://github.com/ingolager/jsramverk-react
 
 
 <!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

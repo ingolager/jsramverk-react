@@ -1,5 +1,5 @@
-Modulerna i denna app är skapade med kommandot npx create-react-app my-app.
-Starta appen med kommandot npm start.
+Modulerna i denna app är skapade med kommandot **npx create-react-app my-app**.
+Starta appen med kommandot **npm start**.
 
 Repot för denna app finns på https://github.com/ingolager/jsramverk-react
 

@@ -63,6 +63,7 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
+    z-index: 2;
 }
 
 footer p {
@@ -76,7 +77,6 @@ nav {
     flex-direction: column; */
     display: block;
     width: 160px;
-    color: #1e90ff;
     margin-left:20px;
 }
 

@@ -173,7 +173,7 @@ handleChangeDay = (selectedDay) => {
         <Select
                 className="react-select"
                 value={selectedYear}
-                defaultValue={{ label: today.getFullYear(), value: today.getFullYear()}}
+                defaultValue={{ label: 2019, value: 2019}}
                 options={yearDrop}
                 styles={customStyles}
                 onChange={this.handleChangeYear}
@@ -183,7 +183,7 @@ handleChangeDay = (selectedDay) => {
         <Select
             className="react-select"
             value={selectedMonth}
-            defaultValue={{ label: month[today.getMonth()], value: month[today.getMonth()]}}
+            defaultValue={{ label: "januari", value: "januari"}}
             options={monthDrop}
             styles={customStyles}
             onChange={this.handleChangeMonth}
@@ -193,7 +193,7 @@ handleChangeDay = (selectedDay) => {
         <Select
             className="react-select"
             value={selectedDay}
-            defaultValue={{ label: today.getDate(), value: today.getDate()}}
+            defaultValue={{ label: 1, value: 1}}
             options={dayDrop}
             styles={customStyles}
             onChange={this.handleChangeDay}

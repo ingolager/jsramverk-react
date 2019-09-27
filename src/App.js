@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 
 import Me from './Me.js';
 import Report from './Report.js';
+import Report2 from './Report2.js';
+import Register from './Register.js';
 
 
 class App extends Component {
@@ -22,13 +24,17 @@ class App extends Component {
           <nav>
             <ul>
               <li><Link to="/">om mig</Link></li>
+              <li><Link to="/register">registrera dig</Link></li>
               <li><Link to="/report/week/1">vecka 1</Link></li>
+              <li><Link to="/report/week/2">vecka 2</Link></li>
             </ul>
           </nav>
           </div>
           <div className="App">
           <Route exact path="/" component={Me} />
-          <Route path="/report/week/" component={Report} />
+          <Route path="/report/week/1" component={Report} />
+          <Route path="/report/week/2" component={Report2} />
+          <Route path="/register" component={Register} />
           </div>
           </div>
 
@@ -42,26 +48,5 @@ class App extends Component {
     );
   }
 }
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 export default App;

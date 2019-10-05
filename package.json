@@ -1,18 +1,24 @@
 {
-  "name": "my-app",
+  "name": "me-api",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-modal": "^3.10.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
     "react-select": "^3.0.4",
-    "reactjs-popup": "^1.5.0"
+    "reactjs-popup": "^1.5.0",
+    "sqlite3": "^4.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "nodemon app.js",
+    "production": "NODE_ENV='production' node app.js",
+    "react start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -31,5 +37,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "* Modulerna i denna app är skapade med kommandot **npx create-react-app my-app**. * Starta appen med kommandot **npm start**.",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingolager/jsramverk-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ingolager/jsramverk-react/issues"
+  },
+  "homepage": "https://github.com/ingolager/jsramverk-react#readme"
 }

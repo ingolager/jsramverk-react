@@ -8,6 +8,14 @@ const index = require('./routes/index');
 const hello = require('./routes/hello');
 const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('./db/texts.sqlite');
+const bcrypt = require('bcryptjs');
+const saltRounds = 10;
+const myPlaintextPassword = 'longandhardP4$$w0rD';
+const hash = 'superlonghashedpasswordfetchedfromthedatabase';
+const jwt = require('jsonwebtoken');
+const payload = { email: "user@example.com" };
+const secret = process.env.JWT_SECRET;
+const token = jwt.sign(payload, secret, { expiresIn: '1h'});
 
 db.run("INSERT INTO users (email, password) VALUES (?, ?)",
     "user@example.com",
@@ -42,6 +50,38 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 app.use('/', index);
 app.use('/hello', hello);
 
+bcrypt.hash(myPlaintextPassword, saltRounds, function(err, hash) {
+    // spara lösenord i databasen.
+});
+
+bcrypt.compare(myPlaintextPassword, hash, function(err, res) {
+    // res innehåller nu true eller false beroende på om det är rätt lösenord.
+});
+
+jwt.verify(token, process.env.JWT_SECRET, function(err, decoded) {
+    if (err) {
+        // not a valid token
+    }
+
+    // valid token
+});
+
+router.post("/reports",
+    (req, res, next) => checkToken(req, res, next),
+    (req, res) => reports.addReport(res, req.body));
+
+function checkToken(req, res, next) {
+    const token = req.headers['x-access-token'];
+
+    jwt.verify(token, process.env.JWT_SECRET, function(err, decoded) {
+        if (err) {
+            // send error response
+        }
+
+        // Valid token send on the request
+        next();
+    });
+}
 
 
 // Add routes for 404 and error handling

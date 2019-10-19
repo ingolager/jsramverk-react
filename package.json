@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "morgan": "^1.9.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-modal": "^3.10.1",
@@ -16,12 +13,11 @@
     "sqlite3": "^4.1.0"
   },
   "scripts": {
-    "start": "nodemon app.js"
-    "production": "NODE_ENV='production' node app.js",
-    "react start": "react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && rsync -av build/* deploy@ingolager.me:/var/www/ingolager.me/html/"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -49,6 +45,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ingolager/jsramverk-react/issues"
-  },
-  "homepage": "https://github.com/ingolager/jsramverk-react#readme"
+  }
 }

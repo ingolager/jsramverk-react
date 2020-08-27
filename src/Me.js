@@ -1,33 +1,30 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import { meHead, meText } from './Me.json';
-import jag from './jag.jpg'
-
 
 class Me extends Component {
     constructor(props) {
     super(props);
-    this.state = { apiResponse: [] };
+    this.state = { data: [] }
 }
+    callAPI() {
+        fetch("http://localhost:1337/aboutme")
+            .then(res => res.json())
+            .then(data => this.setState({ data }))
+            .then(data => console.log(this.state.data));
+    }
 
-componentDidMount() {
-    // axios.get('http://localhost:1337/me')
-    axios.get('https://backend.ingolager.me/me')
-        .then(res => {
-            const apiResponse = res.data;
-            this.setState({ apiResponse });
-            const response = this.state.apiResponse.data.msg;
-            this.setState({response})
-            console.log(response);
-    })
-}
+    componentWillMount() {
+        this.callAPI();
+    }
+
 
   render() {
+      const text = this.state.data;
       return (
+
           <div className="Me">
-            <h2> { meHead } </h2>
-            <img src={jag} alt="jag" />
-            <p> { this.state.response } </p>
+            <h2> { text[0] } </h2>
+            <img src="http://localhost:1337/images/jag.jpg" alt="jag"/>
+            <p className="App"> {text[1]}</p>
           </div>
     );
   }
